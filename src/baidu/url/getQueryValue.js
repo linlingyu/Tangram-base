@@ -24,10 +24,11 @@
  * @returns {string|null} 获取的参数值，获取不到时返回null
  */
 baidu.url.getQueryValue = function (url, key) {
+    //#锚点分隔符,&参数分隔符
     var reg = new RegExp(
                         "(^|&|\\?|#)" 
                         + baidu.string.escapeReg(key) 
-                        + "=([^&]*)(&|\x24)", 
+                        + "=([^&#]*)(&|#|\x24)", 
                     "");
     var match = url.match(reg);
     if (match) {

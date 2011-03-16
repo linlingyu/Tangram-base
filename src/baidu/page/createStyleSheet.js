@@ -20,7 +20,7 @@
                 
  * @param {Document} options.document 指定在哪个document下创建，默认是当前文档
  * @param {String} options.url css文件的URL
- * @param {Number} options.index 在文档里的排序索引
+ * @param {Number} options.index 在文档里的排序索引（注意：该索引在IE下有效，其它浏览器无效）
  * @version 1.2
  * @see baidu.page.createStyleSheet.StyleSheet
  *             
